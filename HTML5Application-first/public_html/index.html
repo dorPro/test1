@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <!-- Include the compiled Ratchet CSS -->
+        <link href="css/loginStyle.css" rel="stylesheet">
+        
+        <!-- jQuery labels 
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+        -->
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+        
+        
+        <script>
+            function validateUserAndPass()
+            {
+                var name = document.forms["login"]["usermail"].value;
+                var pass = document.forms["login"]["password"].value;
+                if ((name != "dor@gmail.com") || (pass != "gold"))
+                {
+                    return false;
+                }
+            }
+        </script>
+    
+        
+    </head>
+    <body>
+        <div>Trustees Login</div>
+        
+         <section class="loginform cf">  
+             <form name="login" action="second.html" onsubmit="return validateUserAndPass()" method="get" accept-charset="utf-8">  
+    <ul>  
+        <li><label for="usermail">Email</label>  
+        <input type="email" name="usermail" placeholder="yourname@email.com" required></li>  
+        <li><label for="password">Password</label>  
+        <input type="password" name="password" placeholder="password" required></li>  
+        <li>  
+        <input type="submit" value="Login"></li>                  
+        
+        <li>           
+        <div data-role="main" class="ui-content">
+            <a href="#" class="ui-btn">Login</a>
+        </div>
+        </li>
+    </ul>  
+            
+            
+</form>  
+    <a href="index.html" data-role="button" data-inline="true">Cancel</a>
+    <a href="index.html" data-role="button" data-inline="true" data-theme="b">Send</a>
+
+             
+</section>
+        
+       
+
+        
+        
+    </body>
+</html>
